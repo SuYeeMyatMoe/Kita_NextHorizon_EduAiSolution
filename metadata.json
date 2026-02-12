@@ -1,0 +1,7 @@
+{
+  "name": "GradeSave of Attendance Backend Complete Classroom of of NextHorizon testing",
+  "description": "An AI-powered educational grading and feedback system for Malaysian teachers, featuring automated rubric analysis and student risk intervention dashboards.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

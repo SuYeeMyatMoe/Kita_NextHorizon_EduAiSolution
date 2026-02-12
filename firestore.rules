@@ -1,0 +1,65 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // --- HELPER FUNCTIONS ---
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // --- USERS COLLECTION ---
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && request.auth.uid == userId;
+    }
+
+    // --- CLASSROOMS COLLECTION ---
+    match /classrooms/{classId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      
+      // Allow updates if teacher (owner) OR if preserving teacherId (students joining)
+      allow update: if isSignedIn() && (
+        resource.data.teacherId == request.auth.uid ||
+        request.resource.data.teacherId == resource.data.teacherId
+      );
+      
+      allow delete: if isSignedIn() && resource.data.teacherId == request.auth.uid;
+
+      // --- NESTED COLLECTIONS ---
+      // Broad permissions to fix dashboard fetch errors
+      match /assignments/{assignmentId} {
+        allow read, write: if isSignedIn();
+        
+        match /submissions/{submissionId} {
+          allow read, write: if isSignedIn();
+        }
+      }
+
+      match /attendance/{recordId} {
+        allow read, write: if isSignedIn();
+      }
+      
+      match /attendanceSessions/{sessionId} {
+        allow read, write: if isSignedIn();
+        
+        match /checkIns/{checkInId} {
+           allow read, write: if isSignedIn();
+        }
+      }
+    }
+
+    // --- REPORT CARDS ---
+    // Fixed: Restrict access to the teacher who owns the report (or the student)
+    // This prevents 'new teachers' from seeing reports from other classes.
+    match /reportCards/{reportId} {
+      allow read: if isSignedIn() && (
+        resource.data.teacherId == request.auth.uid || 
+        resource.data.studentId == request.auth.uid
+      );
+      allow create: if isSignedIn();
+      allow update, delete: if isSignedIn() && resource.data.teacherId == request.auth.uid;
+    }
+  }
+}
