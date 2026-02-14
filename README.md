@@ -103,31 +103,71 @@ While the world has moved to hybrid learning, the administrative workload for te
 
 ## 🏗 Architecture
 
-```
+```mermaid
 graph TD
-    User[User: Teacher/Student] --> Client[React + Vite Client]
-    
-    subgraph Frontend_Layer
-    Client --> Auth[Firebase Auth Service]
-    Client --> Store[Firestore Service]
-    Client --> AI[Google GenAI SDK]
-    end
-    
-    subgraph Google_Cloud_Platform
-    Auth --> FB_Auth[Authentication]
-    Store --> FB_DB[Cloud Firestore]
-    end
-    
-    subgraph Google_AI_Studio
-    AI --> Flash[Gemini 2.5 Flash]
-    AI --> Pro[Gemini 3 Pro]
-    end
-    
-    Flash --> Grading[Grading Logic & JSON Parsing]
-    Pro --> Creative[Image Gen & Complex Reasoning]
+    %% Styling
+    classDef user fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef frontend fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    classDef firebase fill:#fff3e0,stroke:#ff6f00,stroke-width:2px;
+    classDef ai fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
 
-Here is the updated `README.md` section with the **Installation & Setup** block formatted perfectly as Markdown code, ready to be copied.
+    %% Users
+    Teacher[👩‍🏫 Teacher]:::user
+    Student[👨‍🎓 Student]:::user
 
+    %% Frontend App
+    subgraph NextHorizon_Client ["💻 NextHorizon Client (React + Vite)"]
+        Dashboard[UI / Dashboard]:::frontend
+        
+        subgraph Features
+            Att[📸 Smart Roll Call<br/>(QR Scanner)]:::frontend
+            Grade[📝 Multimodal Grading<br/>(PDF/Video Processor)]:::frontend
+            Studio[🎨 Content Studio<br/>(Generator)]:::frontend
+        end
+        
+        Export[📄 Export Engine<br/>DOCX/PPT/CSV]:::frontend
+    end
+
+    %% Backend Services
+    subgraph Google_Cloud ["☁️ Google Cloud Platform"]
+        Auth[🔥 Firebase Auth]:::firebase
+        DB[(🔥 Firestore DB<br/>Real-time Sync)]:::firebase
+    end
+
+    %% AI Logic
+    subgraph AI_Engine ["🤖 Google AI Studio"]
+        SDK[Google GenAI SDK]:::ai
+        
+        subgraph Models
+            Flash[⚡ Gemini 2.5 Flash<br/>(High Speed / Large Context)]:::ai
+            Pro[🧠 Gemini 3 Pro<br/>(Complex Reasoning / Image Gen)]:::ai
+        end
+    end
+
+    %% Flows
+    Teacher -->|Login| Auth
+    Student -->|Scan QR| Att
+    
+    %% Attendance Flow
+    Att -->|Write Presence| DB
+    DB -->|OnSnapshot Update| Dashboard
+
+    %% Grading Flow
+    Teacher -->|Upload PDF/Video Link| Grade
+    Grade -->|Unstructured Data| SDK
+    SDK -->|Grading Logic| Flash
+    Flash -->|JSON Feedback| Dashboard
+
+    %% Content Creation Flow
+    Teacher -->|Request Lesson Plan| Studio
+    Studio -->|Prompt| SDK
+    SDK -->|Text Generation| Flash
+    SDK -->|Image/Diagram Gen| Pro
+    Pro -->|Visual Assets| Studio
+    
+    %% Export
+    Studio -->|Raw Content| Export
+    Export -->|Download File| Teacher
 ```
 ---
 ## 💻 Installation & Setup
