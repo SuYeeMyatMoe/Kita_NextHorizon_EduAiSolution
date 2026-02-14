@@ -103,13 +103,6 @@ While the world has moved to hybrid learning, the administrative workload for te
 
 ## 🏗 Architecture
 
-graph TD
-    %% Styling
-    classDef user fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
-    classDef frontend fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
-    classDef firebase fill:#fff3e0,stroke:#ff6f00,stroke-width:2px;
-    classDef ai fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-
     %% Users
     Teacher[👩‍🏫 Teacher]:::user
     Student[👨‍🎓 Student]:::user
