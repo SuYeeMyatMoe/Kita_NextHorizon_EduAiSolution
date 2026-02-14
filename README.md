@@ -126,30 +126,51 @@ Here is the updated `README.md` section with the **Installation & Setup** block 
 ---
 ## 💻 Installation & Setup
 
-### Prerequisites
-* **Node.js** (v18 or higher)
-* **Google Cloud Project** (for Firebase configuration)
-* **Google AI Studio API Key** (for Gemini models)
+### 📋 Prerequisites
 
-### Steps
+Make sure you have the following installed and configured:
 
-**1. Clone the Repository**
+- **Node.js** (v18 or higher)
+- **Google Cloud Project** (for Firebase configuration)
+- **Google AI Studio API Key** (for Gemini models)
+- **Firebase Project** (Authentication, Firestore, or other services if used)
+
+---
+
+### 🚀 Steps to Run the Project
+
+#### 1️⃣ Clone the Repository
+
 ```bash
-git clone [https://github.com/yourusername/next-horizon.git](https://github.com/yourusername/next-horizon.git)
+git clone https://github.com/yourusername/next-horizon.git
 cd next-horizon
-2. Install Dependencies
-
-Bash
+#### 2️⃣ Install Dependencies
 npm install
-3. Environment Configuration
-Create a .env file in the root directory of your project and add your API keys:
+#### 3️⃣ Environment Configuration
+Create a .env file in the root directory and add the following:
 
-Code snippet
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_GEMINI_API_KEY=your_google_ai_studio_key
-4. Run Development Server
-
-Bash
+#### 4️⃣ Run the Development Server
 npm run dev
+#### 5️⃣ Open in Browser
+After running the server, open:
+
+http://localhost:5173
+✅ Tech Stack Used
+⚛️ React + Vite
+
+🔥 Firebase (Authentication / Database)
+
+🤖 Google Gemini API (AI features)
+
+🟦 TypeScript (if enabled)
+
+🎨 Modern CSS / Tailwind / MUI (if used)
+
+🛠️ Build for Production
+npm run build
+📦 Preview Production Build
+npm run preview
