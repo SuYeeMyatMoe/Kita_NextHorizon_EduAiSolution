@@ -12,10 +12,15 @@
 ---
 
 ## 📸 Project Screenshots
-| **Teacher Dashboard** | **Multimodal Grading Feedback** | **Smart Roll Call** | **Report Card** |
-|:---:|:---:|:---:|:---:|
-| ![Dashboard](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Dashboard.png) | ![Grading](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Feedback.png) | ![Roll Call](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png) | ![Report Card](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png) |
-| *Real-time analytics & Quick Actions* | *Evidence-based feedback on PDFs & Videos* | *Instant attendance tracking & QR scan* | *AI-generated performance summaries* |
+| **Teacher Dashboard** | **Multimodal Grading Feedback** |
+|:---:|:---:|
+| ![Dashboard](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Dashboard.png?raw=true) | ![Grading](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Feedback.png?raw=true) |
+| *Real-time analytics & Quick Actions* | *Evidence-based feedback on PDFs & Videos* |
+
+| **Smart Roll Call** | **Report Card** |
+|:---:|:---:|
+| ![Roll Call](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png?raw=true) | ![Report Card](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png?raw=true) |
+| *Instant attendance tracking & QR scan* | *AI-generated performance summaries* |
 
 
 ---
