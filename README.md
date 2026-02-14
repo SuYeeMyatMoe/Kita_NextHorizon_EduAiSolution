@@ -144,33 +144,22 @@ Make sure you have the following installed and configured:
 ```bash
 git clone https://github.com/yourusername/next-horizon.git
 cd next-horizon
+```
 #### 2️⃣ Install Dependencies
+```bash
 npm install
-#### 3️⃣ Environment Configuration
-Create a .env file in the root directory and add the following:
+```
 
+#### 3️⃣ Environment Configuration
+Create a .env file in the root directory and add:
+```bash
+VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_GEMINI_API_KEY=your_google_ai_studio_key
+```
 #### 4️⃣ Run the Development Server
+```bash
 npm run dev
-#### 5️⃣ Open in Browser
-After running the server, open:
-
-http://localhost:5173
-✅ Tech Stack Used
-⚛️ React + Vite
-
-🔥 Firebase (Authentication / Database)
-
-🤖 Google Gemini API (AI features)
-
-🟦 TypeScript (if enabled)
-
-🎨 Modern CSS / Tailwind / MUI (if used)
-
-🛠️ Build for Production
-npm run build
-📦 Preview Production Build
-npm run preview
+```
