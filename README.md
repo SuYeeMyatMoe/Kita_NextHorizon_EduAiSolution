@@ -103,7 +103,6 @@ While the world has moved to hybrid learning, the administrative workload for te
 
 ## 🏗 Architecture
 
-```mermaid
 graph TD
     %% Styling
     classDef user fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
@@ -120,18 +119,18 @@ graph TD
         Dashboard[UI / Dashboard]:::frontend
         
         subgraph Features
-            Att[📸 Smart Roll Call<br/>(QR Scanner)]:::frontend
-            Grade[📝 Multimodal Grading<br/>(PDF/Video Processor)]:::frontend
-            Studio[🎨 Content Studio<br/>(Generator)]:::frontend
+            Att["📸 Smart Roll Call\n(QR Scanner)"]:::frontend
+            Grade["📝 Multimodal Grading\n(PDF/Video Processor)"]:::frontend
+            Studio["🎨 Content Studio\n(Generator)"]:::frontend
         end
         
-        Export[📄 Export Engine<br/>DOCX/PPT/CSV]:::frontend
+        Export["📄 Export Engine\nDOCX/PPT/CSV"]:::frontend
     end
 
     %% Backend Services
     subgraph Google_Cloud ["☁️ Google Cloud Platform"]
         Auth[🔥 Firebase Auth]:::firebase
-        DB[(🔥 Firestore DB<br/>Real-time Sync)]:::firebase
+        DB[("🔥 Firestore DB\nReal-time Sync")]:::firebase
     end
 
     %% AI Logic
@@ -139,8 +138,8 @@ graph TD
         SDK[Google GenAI SDK]:::ai
         
         subgraph Models
-            Flash[⚡ Gemini 2.5 Flash<br/>(High Speed / Large Context)]:::ai
-            Pro[🧠 Gemini 3 Pro<br/>(Complex Reasoning / Image Gen)]:::ai
+            Flash["⚡ Gemini 2.5 Flash\n(High Speed / Large Context)"]:::ai
+            Pro["🧠 Gemini 3 Pro\n(Complex Reasoning / Image Gen)"]:::ai
         end
     end
 
@@ -168,7 +167,8 @@ graph TD
     %% Export
     Studio -->|Raw Content| Export
     Export -->|Download File| Teacher
-```
+
+
 ---
 ## 💻 Installation & Setup
 
