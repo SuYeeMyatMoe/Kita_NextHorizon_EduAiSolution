@@ -12,10 +12,11 @@
 ---
 
 ## 📸 Project Screenshots
-| **Teacher Dashboard** | **Multimodal Grading** |
-|:---:|:---:|
-| ![Dashboard](https://placehold.co/600x400/EEE/31343C?text=Teacher+Dashboard+UI) | ![Grading](https://placehold.co/600x400/EEE/31343C?text=AI+Grading+Feedback) |
-| *Real-time analytics & Quick Actions* | *Evidence-based feedback on PDFs & Videos* |
+| **Teacher Dashboard** | **Multimodal Grading Feedback** | **Smart Roll Call** | **Report Card** |
+|:---:|:---:|:---:|:---:|
+| ![Dashboard](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Dashboard.png) | ![Grading](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Feedback.png) | ![Roll Call](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png) | ![Report Card](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png) |
+| *Real-time analytics & Quick Actions* | *Evidence-based feedback on PDFs & Videos* | *Instant attendance tracking & QR scan* | *AI-generated performance summaries* |
+
 
 ---
 
