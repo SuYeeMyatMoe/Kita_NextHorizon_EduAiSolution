@@ -97,7 +97,7 @@ While the world has moved to hybrid learning, the administrative workload for te
 
 ## 🏗 Architecture
 
-```mermaid
+```
 graph TD
     User[User: Teacher/Student] --> Client[React + Vite Client]
     
@@ -123,47 +123,33 @@ graph TD
 Here is the updated `README.md` section with the **Installation & Setup** block formatted perfectly as Markdown code, ready to be copied.
 
 ```markdown
-## 💻 Installation & Setup
+💻 Installation & Setup
+Prerequisites
+Node.js (v18+)
 
-### Prerequisites
-* **Node.js** (v18 or higher)
-* **Google Cloud Project** (for Firebase configuration)
-* **Google AI Studio API Key** (for Gemini models)
+Google Cloud Project (for Firebase)
 
-### Steps
+Google AI Studio API Key
 
-**1. Clone the Repository**
-```bash
+Steps
+Clone the Repository
+
+Bash
 git clone [https://github.com/yourusername/next-horizon.git](https://github.com/yourusername/next-horizon.git)
 cd next-horizon
+Install Dependencies
 
-```
-
-**2. Install Dependencies**
-
-```bash
+Bash
 npm install
+Environment Configuration
+Create a .env file in the root directory and add your keys:
 
-```
-
-**3. Environment Configuration**
-Create a `.env` file in the root directory of your project and add your API keys:
-
-```env
+Code snippet
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_GEMINI_API_KEY=your_google_ai_studio_key
+Run Development Server
 
-```
-
-**4. Run Development Server**
-
-```bash
+Bash
 npm run dev
-
-```
-
-```
-
-```
