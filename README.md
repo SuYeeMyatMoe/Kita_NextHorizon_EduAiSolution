@@ -19,8 +19,8 @@
 
 | **Smart Roll Call** | **Report Card** |
 |:---:|:---:|
-| ![Roll Call](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png?raw=true) | ![Report Card](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png?raw=true) |
-| *Instant attendance tracking & QR scan* | *AI-generated performance summaries* |
+| ![Roll Call](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/429b06365425efaebf39f9d49f28ed6f978f8ddd/Images/SmartRollCall.png) | ![Report Card](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/1b8f86c01019306d0a794e4d8cf5006c622bd76b/Images/Reportcard.png?raw=true) |
+| *Instant attendance tracking & QR scan* | *Performance summaries report card according to grading* |
 
 
 ---
