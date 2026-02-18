@@ -152,7 +152,7 @@ flowchart TD
     
     Studio -->|Raw Content| Export
     Export -->|Download File| Teacher
-
+```
 ---
 ## 💻 Installation & Setup
 
