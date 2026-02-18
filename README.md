@@ -33,7 +33,6 @@
 - [🤖 Google Technology Implementation](#-google-technology-implementation)
 - [🏗 Architecture](#-architecture)
 - [💻 Installation & Setup](#-installation--setup)
-- [🗺 Future Roadmap](#-future-roadmap)
 
 ---
 
@@ -98,17 +97,18 @@ While the world has moved to hybrid learning, the administrative workload for te
 | **Gemini 3 Pro** | Integrated into "Content Studio" for Image Generation. | **Effect:** Allows teachers to create copyright-free, curriculum-accurate diagrams instantly. |
 | **Firebase Auth** | Implemented Google Sign-In provider. | **Effect:** Zero-friction onboarding for schools already using Google Workspace for Education. |
 | **Firestore** | Real-time listeners (`onSnapshot`) for attendance data. | **Effect:** Enables the "Live QR" feature where a student's phone scan updates the projector screen instantly. |
-
+| **Google AI Studio** | Centralized dashboard for API key provisioning and security rules. | 
 ---
 
 ## 🏗 Architecture
-
+flowchart TD
     %% Users
     Teacher[👩‍🏫 Teacher]:::user
     Student[👨‍🎓 Student]:::user
 
     %% Frontend App
     subgraph NextHorizon_Client ["💻 NextHorizon Client (React + Vite)"]
+        direction TB
         Dashboard[UI / Dashboard]:::frontend
         
         subgraph Features
@@ -160,6 +160,12 @@ While the world has moved to hybrid learning, the administrative workload for te
     %% Export
     Studio -->|Raw Content| Export
     Export -->|Download File| Teacher
+
+    %% Styling
+    classDef user fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef frontend fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef firebase fill:#fff3e0,stroke:#ff6f00,stroke-width:2px;
+    classDef ai fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
 
 
 ---
