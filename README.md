@@ -101,71 +101,59 @@ While the world has moved to hybrid learning, the administrative workload for te
 ---
 
 ## 🏗 Architecture
-flowchart TD
-    %% Users
-    Teacher[👩‍🏫 Teacher]:::user
-    Student[👨‍🎓 Student]:::user
+## 🏗 Architecture
 
-    %% Frontend App
+```mermaid
+flowchart TD
+    Teacher[👩‍🏫 Teacher]
+    Student[👨‍🎓 Student]
+
     subgraph NextHorizon_Client ["💻 NextHorizon Client (React + Vite)"]
         direction TB
-        Dashboard[UI / Dashboard]:::frontend
+        Dashboard[UI / Dashboard]
         
         subgraph Features
-            Att["📸 Smart Roll Call\n(QR Scanner)"]:::frontend
-            Grade["📝 Multimodal Grading\n(PDF/Video Processor)"]:::frontend
-            Studio["🎨 Content Studio\n(Generator)"]:::frontend
+            Att["📸 Smart Roll Call\n(QR Scanner)"]
+            Grade["📝 Multimodal Grading\n(PDF/Video Processor)"]
+            Studio["🎨 Content Studio\n(Generator)"]
         end
         
-        Export["📄 Export Engine\nDOCX/PPT/CSV"]:::frontend
+        Export["📄 Export Engine\nDOCX/PPT/CSV"]
     end
 
-    %% Backend Services
     subgraph Google_Cloud ["☁️ Google Cloud Platform"]
-        Auth[🔥 Firebase Auth]:::firebase
-        DB[("🔥 Firestore DB\nReal-time Sync")]:::firebase
+        Auth[🔥 Firebase Auth]
+        DB[("🔥 Firestore DB\nReal-time Sync")]
     end
 
-    %% AI Logic
     subgraph AI_Engine ["🤖 Google AI Studio"]
-        SDK[Google GenAI SDK]:::ai
+        SDK[Google GenAI SDK]
         
         subgraph Models
-            Flash["⚡ Gemini 2.5 Flash\n(High Speed / Large Context)"]:::ai
-            Pro["🧠 Gemini 3 Pro\n(Complex Reasoning / Image Gen)"]:::ai
+            Flash["⚡ Gemini 2.5 Flash\n(High Speed / Large Context)"]
+            Pro["🧠 Gemini 3 Pro\n(Complex Reasoning / Image Gen)"]
         end
     end
 
-    %% Flows
     Teacher -->|Login| Auth
     Student -->|Scan QR| Att
     
-    %% Attendance Flow
     Att -->|Write Presence| DB
     DB -->|OnSnapshot Update| Dashboard
 
-    %% Grading Flow
     Teacher -->|Upload PDF/Video Link| Grade
     Grade -->|Unstructured Data| SDK
     SDK -->|Grading Logic| Flash
     Flash -->|JSON Feedback| Dashboard
 
-    %% Content Creation Flow
     Teacher -->|Request Lesson Plan| Studio
     Studio -->|Prompt| SDK
     SDK -->|Text Generation| Flash
     SDK -->|Image/Diagram Gen| Pro
     Pro -->|Visual Assets| Studio
     
-    %% Export
     Studio -->|Raw Content| Export
     Export -->|Download File| Teacher
-
-    %% Styling
-    classDef user fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef frontend fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef firebase fill:#fff3e0,stroke:#ff6f00,stroke-width:2px;
-    classDef ai fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
 
 
 ---
