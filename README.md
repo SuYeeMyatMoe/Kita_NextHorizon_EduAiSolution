@@ -99,8 +99,6 @@ While the world has moved to hybrid learning, the administrative workload for te
 | **Firestore** | Real-time listeners (`onSnapshot`) for attendance data. | **Effect:** Enables the "Live QR" feature where a student's phone scan updates the projector screen instantly. |
 | **Google AI Studio** | Centralized dashboard for API key provisioning and security rules. | 
 ---
-
-## 🏗 Architecture
 ## 🏗 Architecture
 
 ```mermaid
@@ -154,7 +152,6 @@ flowchart TD
     
     Studio -->|Raw Content| Export
     Export -->|Download File| Teacher
-
 
 ---
 ## 💻 Installation & Setup
