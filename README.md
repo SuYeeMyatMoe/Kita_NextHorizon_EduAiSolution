@@ -39,7 +39,9 @@
 ---
 
 ## 👋 Team Introduction
-**Team IntelliCore** 
+
+**Team IntelliCore**
+
 We are a team of first-year Software Engineering students from **City University**, passionate about leveraging AI to solve real-world educational challenges. Our mission is to empower teachers by reclaiming the art of teaching and automating the science of administration.
 
 ---
