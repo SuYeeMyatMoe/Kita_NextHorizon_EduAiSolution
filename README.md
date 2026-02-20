@@ -39,7 +39,8 @@
 ---
 
 ## 👋 Team Introduction
-**Team IntelliCore** We are a team of first-year Software Engineering students from **City University**, passionate about leveraging AI to solve real-world educational challenges. Our mission is to empower teachers by reclaiming the art of teaching and automating the science of administration.
+**Team IntelliCore** 
+We are a team of first-year Software Engineering students from **City University**, passionate about leveraging AI to solve real-world educational challenges. Our mission is to empower teachers by reclaiming the art of teaching and automating the science of administration.
 
 ---
 
@@ -179,7 +180,7 @@ flowchart TD
 ## 🚧 Challenges Faced & Technical Trade-offs  
 
 - **Significant Technical Challenge:** *Scaling Firebase Auth Permissions & Security Rules.*
-  - **The Problem:** We initially secured our Firestore database with strict Firebase Security Rules. However, as we rapidly added new complex features—like the Smart Roll Call and Multimodal AI Grading—we hit a massive bottleneck. The existing rules began blocking valid operations, throwing "permission denied" errors because the new features required cross-collection writes (e.g., a student scanning a QR code needing to securely update a teacher's attendance log). These strict auth blocks caused our UI to desynchronize, as the Gemini AI would finish processing, but the database writes would silently fail.  
+  - **The Problem:** We initially secured our Firestore database with strict Firebase Security Rules. However, as we rapidly added new complex features (like the Smart Roll Call and Multimodal AI Grading) we hit a massive bottleneck. The existing rules began blocking valid operations, throwing "permission denied" errors because the new features required cross-collection writes (e.g., a student scanning a QR code needing to securely update a teacher's attendance log). These strict auth blocks caused our UI to desynchronize, as the Gemini AI would finish processing, but the database writes would silently fail.  
   - **The Solution:** We completely re-architected our Firebase Security Rules from basic global checks to granular, feature-specific authorization. We implemented data-validation rules using `request.resource.data` to ensure users could only update specific authorized fields (like appending a single attendance record) without gaining full write access to the document. On the frontend, we built a custom React hook to catch these permission states, ensuring the UI only updated after the database confirmed the secure write.
   > 🔒 **View our custom security implementation:** [`firestore.rules`](https://github.com/SuYeeMyatMoe/Kita_NextHorizon_EduAiSolution/blob/main/firestore.rules)
 
