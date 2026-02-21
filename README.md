@@ -224,7 +224,7 @@ To cater to varying needs while managing AI computational costs, we offer a thre
 | **Content Studio** | Text-only lesson plans & quizzes | Includes high-fidelity Image Generation (diagrams) & File Auto-Export | Advanced Curriculum Mapping & Custom Institutional Branding |
 | **Smart Roll Call** | Standard QR Scan | Real-time Dashboard Sync | Pulse-Check & Biometric / BLE Attendance |
 | **Analytics** | Grade tracking | Basic Student Performance Trends | Predictive Risk Dashboard & Early Dropout Flags |
-| **Price** | **$0** / month | **$12** / month | **Custom B2B Pricing** |
+| **Price** | **$0** / month | **$3** / month | **Custom B2B Pricing** |
 ---
 ## 💻 Installation & Setup
 
