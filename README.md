@@ -34,6 +34,7 @@
 - [🏗 Architecture](#-architecture)
 - [🚧 Challenges Faced & Technical Trade-offs](#-challenges-faced--technical-trade-offs)
 - [🚀 Future Roadmap & Sustainability](#-future-roadmap--sustainability)
+- [💼 Target Market & Business Model](#-target-market--business-model)
 - [💻 Installation & Setup](#-installation--setup)
 
 ---
@@ -202,6 +203,29 @@ We are building a **"Bottom-Up" SaaS model** targeting individual educators firs
 
 - **Phase 4: Advanced Studio & Curriculum Alignment (Q2 2027)** * **AI Syllabus Mapping & Slide Enhancement:** Upgrade the Content Studio so teachers can upload existing presentations for the AI to **improve slides directly**. The system will also feature a **Syllabus Map** to automatically align generated lessons with official curriculum standards.
 ---
+## 💼 Target Market & Business Model
+
+**Target Market:**
+* **B2C (Individual Educators):** Teachers and university lecturers looking to reduce their after-hours administrative workload and avoid burnout.
+* **B2B (Educational Institutions):** Schools, colleges, and school districts looking for a standardized, secure AI ecosystem to manage hybrid learning, track attendance, and monitor overall student success.
+
+**The Strategy: "Bottom-Up" Product-Led Growth (PLG)**
+We are adopting a scalable freemium SaaS model. By empowering individual teachers first with a highly accessible free tier, we aim to build organic "product champions" within schools. Once a critical mass of teachers at a single institution relies on NextHorizon, we will pitch our top-tier enterprise plan directly to the administration for seamless, campus-wide LMS integration.
+---
+### 💳 Pricing Tiers
+
+To cater to varying needs while managing AI computational costs, we offer a three-tiered pricing structure:
+
+| Feature | 🌱 **Basic (Free)** | 🚀 **Premium** | 👑 **Ultra Premium** |
+| :--- | :--- | :--- | :--- |
+| **Target Audience** | Occasional Users / New Teachers | Power-User Educators | Whole Schools & Universities |
+| **AI Model & Accuracy** | **Standard** (Gemini 2.5 Flash) | **Medium-High** (Flash + Limited Gemini 3.1 Pro) | **Best Accuracy** (Priority Gemini 3.1 Pro) |
+| **Grading Quota** | Up to 50 submissions / month | Up to 500 submissions / month | **Unlimited** submissions |
+| **Content Studio** | Text-only lesson plans & quizzes | Includes high-fidelity Image Generation (diagrams) & File Auto-Export | Advanced Curriculum Mapping & Custom Institutional Branding |
+| **Smart Roll Call** | Standard QR Scan | Real-time Dashboard Sync | Pulse-Check & Biometric / BLE Attendance |
+| **Analytics** | Grade tracking | Basic Student Performance Trends | Predictive Risk Dashboard & Early Dropout Flags |
+| **Price** | **$0** / month | **$12** / month | **Custom B2B Pricing** |
+---
 ## 💻 Installation & Setup
 
 ### 📋 Prerequisites
@@ -231,7 +255,6 @@ npm install
 #### 3️⃣ Environment Configuration
 Create a .env file in the root directory and add:
 ```bash
-VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
