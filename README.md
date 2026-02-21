@@ -211,7 +211,7 @@ We are building a **"Bottom-Up" SaaS model** targeting individual educators firs
 
 **The Strategy: "Bottom-Up" Product-Led Growth (PLG)**
 We are adopting a scalable freemium SaaS model. By empowering individual teachers first with a highly accessible free tier, we aim to build organic "product champions" within schools. Once a critical mass of teachers at a single institution relies on NextHorizon, we will pitch our top-tier enterprise plan directly to the administration for seamless, campus-wide LMS integration.
----
+
 ### 💳 Pricing Tiers
 
 To cater to varying needs while managing AI computational costs, we offer a three-tiered pricing structure:
