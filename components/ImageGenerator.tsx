@@ -42,7 +42,7 @@ const ImageGenerator: React.FC = () => {
           </div>
           Visual Learning Engine
         </h2>
-        <p className="text-slate-500 mt-2 font-medium ml-14">Generate high-fidelity educational diagrams, scenes, and visual aids using Gemini 3 Pro.</p>
+        <p className="text-slate-500 mt-2 font-medium ml-14">Generate high-fidelity educational diagrams, scenes, and visual aids using Gemini 3.1 Flash.</p>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

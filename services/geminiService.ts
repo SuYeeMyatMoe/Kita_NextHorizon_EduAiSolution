@@ -664,13 +664,13 @@ export const generateImage = async (
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const model = (resolution === '2K' || resolution === '4K') 
-      ? 'gemini-3-pro-image-preview' 
+      ? 'gemini-3.1-flash-image-preview' 
       : 'gemini-2.5-flash-image';
 
     const config: any = {
       imageConfig: { aspectRatio: "1:1" }
     };
-    if (model === 'gemini-3-pro-image-preview') config.imageConfig.imageSize = resolution;
+    if (model === 'gemini-3.1-flash-image-preview') config.imageConfig.imageSize = resolution;
 
     const response = await callWithRetry<GenerateContentResponse>(() => ai.models.generateContent({
       model: model,

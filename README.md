@@ -63,7 +63,7 @@ While the world has moved to hybrid learning, the administrative workload for te
 2.  **AI Content Studio**
     * One-click generation of Quizzes, Lesson Plans, and Slide Decks.
     * **Auto-Export:** Downloads directly as `.docx`, `.csv` (Excel ready), and PowerPoint.
-    * **Visual Aid Gen:** Uses `gemini-3-pro-image-preview` to generate accurate scientific/educational diagrams.
+    * **Visual Aid Gen:** Uses `gemini-3.1-flash-image-preview` to generate accurate scientific/educational diagrams.
 3.  **Live Hybrid Attendance**
     * Real-time QR code scanning for students.
     * Instant sync to teacher dashboard with manual override for connectivity issues.
@@ -85,7 +85,7 @@ While the world has moved to hybrid learning, the administrative workload for te
 | **Auth** | Firebase Auth | Secure Google Login & Email authentication. |
 | **Database** | Cloud Firestore | Real-time NoSQL database for instant attendance sync. |
 | **AI Logic** | **Gemini 2.5 Flash** | Ultra-low latency model for grading & text generation. |
-| **AI Creative** | **Gemini 3 Pro** | High-reasoning model for image generation & complex problem solving. |
+| **AI Creative** | **Gemini 3.1 Flash** | High-reasoning model for image generation & complex problem solving. |
 
 ---
 
@@ -94,7 +94,7 @@ While the world has moved to hybrid learning, the administrative workload for te
 | Google Tech | Implementation Details | Impact (Cause & Effect) |
 | :--- | :--- | :--- |
 | **Gemini 2.5 Flash** | Used via Google AI Studio SDK (`@google/genai`) for all text-based grading tasks. | **Effect:** Reduced grading latency by **40%** per student compared to Pro models, enabling "Live Feedback" during class sessions. |
-| **Gemini 3 Pro** | Integrated into "Content Studio" for Image Generation. | **Effect:** Allows teachers to create copyright-free, curriculum-accurate diagrams instantly. |
+| **Gemini 3.1 Flash** | Integrated into "Content Studio" for Image Generation. | **Effect:** Allows teachers to create copyright-free, curriculum-accurate diagrams instantly. |
 | **Firebase Auth** | Implemented Google Sign-In provider. | **Effect:** Zero-friction onboarding for schools already using Google Workspace for Education. |
 | **Firestore** | Real-time listeners (`onSnapshot`) for attendance data. | **Effect:** Enables the "Live QR" feature where a student's phone scan updates the projector screen instantly. |
 | **Google AI Studio** | Centralized dashboard for API key provisioning and security rules. | 
@@ -129,7 +129,7 @@ flowchart TD
         
         subgraph Models
             Flash["⚡ Gemini 2.5 Flash\n(High Speed / Large Context)"]
-            Pro["🧠 Gemini 3 Pro\n(Complex Reasoning / Image Gen)"]
+            Pro["🧠 Gemini 3.1 Flash\n(Complex Reasoning / Image Gen)"]
         end
     end
 
