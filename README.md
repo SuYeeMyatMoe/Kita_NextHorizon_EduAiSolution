@@ -219,7 +219,7 @@ To cater to varying needs while managing AI computational costs, we offer a thre
 | Feature | 🌱 **Basic (Free)** | 🚀 **Premium** | 👑 **Ultra Premium** |
 | :--- | :--- | :--- | :--- |
 | **Target Audience** | Occasional Users / New Teachers | Power-User Educators | Whole Schools & Universities |
-| **AI Model & Accuracy** | **Standard** (Gemini 2.5 Flash) | **Medium-High** (Flash + Limited Gemini 3.1 Pro) | **Best Accuracy** (Priority Gemini 3.1 Pro) |
+| **AI Model & Accuracy** | **Standard** (Gemini 2.5 Flash) | **Medium-High** (Flash + Limited Gemini 3.1 Flash | **Best Accuracy** (Priority Gemini 3.1 Flash) |
 | **Grading Quota** | Up to 50 submissions / month | Up to 500 submissions / month | **Unlimited** submissions |
 | **Content Studio** | Text-only lesson plans & quizzes | Includes high-fidelity Image Generation (diagrams) & File Auto-Export | Advanced Curriculum Mapping & Custom Institutional Branding |
 | **Smart Roll Call** | Standard QR Scan | Real-time Dashboard Sync | Pulse-Check & Biometric / BLE Attendance |
